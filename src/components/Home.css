@@ -1,0 +1,35 @@
+.triangle-lgr {
+    right: 0;
+    top: 2em;
+    width: 10%;
+    height: 50%;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    background: #141a26;
+    position: absolute;
+}
+
+.triangle-smr {
+    right: 1.5em;
+    top: 1em;
+    width: 5%;
+    height: 25%;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+    background: #222b3c;
+    opacity: 50%;
+    position: absolute;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .triangle-smr {
+        animation: triangle-smr-bounce infinite 1s alternate;
+    }
+}
+
+@keyframes triangle-smr-bounce {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(5%);
+  }
+}
